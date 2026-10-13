@@ -1,0 +1,9 @@
+{"id": "qa-001", "suite": "indic_qa", "lang": "hi", "scorer": "exact", "prompt": "Answer in the same language, as briefly as possible.\nQuestion: भारत की राजधानी क्या है?", "reference": "नई दिल्ली"}
+{"id": "qa-002", "suite": "indic_qa", "lang": "hi", "scorer": "exact", "prompt": "Answer in the same language, as briefly as possible.\nQuestion: एक साल में कितने महीने होते हैं? केवल संख्या लिखें।", "reference": "12"}
+{"id": "qa-003", "suite": "indic_qa", "lang": "hi", "scorer": "exact", "prompt": "Answer in the same language, as briefly as possible.\nQuestion: गंगा नदी किस समुद्र/खाड़ी में गिरती है?", "reference": "बंगाल की खाड़ी"}
+{"id": "qa-004", "suite": "indic_qa", "lang": "ta", "scorer": "exact", "prompt": "Answer in the same language, as briefly as possible.\nQuestion: இந்தியாவின் தேசிய பறவை எது?", "reference": "மயில்"}
+{"id": "qa-005", "suite": "indic_qa", "lang": "ta", "scorer": "exact", "prompt": "Answer in the same language, as briefly as possible.\nQuestion: ஒரு வாரத்தில் எத்தனை நாட்கள்? எண் மட்டும்.", "reference": "7"}
+{"id": "qa-006", "suite": "indic_qa", "lang": "bn", "scorer": "exact", "prompt": "Answer in the same language, as briefly as possible.\nQuestion: ভারতের জাতীয় পশু কী?", "reference": "বাঘ"}
+{"id": "qa-007", "suite": "indic_qa", "lang": "bn", "scorer": "exact", "prompt": "Answer in the same language, as briefly as possible.\nQuestion: এক ঘণ্টায় কত মিনিট? শুধু সংখ্যা।", "reference": "60"}
+{"id": "qa-008", "suite": "indic_qa", "lang": "mr", "scorer": "exact", "prompt": "Answer in the same language, as briefly as possible.\nQuestion: महाराष्ट्राची राजधानी कोणती?", "reference": "मुंबई"}
+{"id": "qa-009", "suite": "indic_qa", "lang": "mr", "scorer": "exact", "prompt": "Answer in the same language, as briefly as possible.\nQuestion: एका दिवसात किती तास असतात? फक्त संख्या.", "reference": "24"}

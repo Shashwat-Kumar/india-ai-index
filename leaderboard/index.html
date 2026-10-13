@@ -1,0 +1,15 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>India AI Index · Leaderboard</title>
+<style>body{font-family:system-ui,sans-serif;background:#0b0d12;color:#e8e8ef;margin:0;padding:40px}main{max-width:960px;margin:auto}
+h1{font-size:34px;margin:0}.sub{color:#9aa}.banner{margin:28px 0;padding:22px;border:1px dashed #f5a623;border-radius:12px;background:#1a1508;color:#f5c26b;font-size:18px}
+table{width:100%;border-collapse:collapse;margin-top:10px}th,td{padding:12px;border-bottom:1px solid #222;text-align:left}th{color:#8af;font-weight:600}
+td.empty{color:#666;text-align:center;font-style:italic}.chips span{display:inline-block;margin:4px;padding:4px 10px;border-radius:99px;background:#1c2233;font-size:13px}</style></head>
+<body><main><h1>India AI Index</h1><p class="sub">How well do LLMs handle Indian languages and Indian documents, and what does each task cost in ₹?</p>
+<div class="banner" id="status"><b>No results yet: awaiting first run.</b> The harness, task sets and scoring are published. No model has been scored, and nothing on this page is an estimate.</div>
+<div class="chips"><span>Indic QA (hi, ta, bn, mr)</span><span>Translation (chrF)</span><span>PAN / GST invoice / bank statement extraction (synthetic)</span><span>₹ cost per task</span></div>
+<table><thead><tr><th>#</th><th>Provider</th><th>Model</th><th>Indic QA</th><th>Translation</th><th>Doc extraction</th><th>Overall</th><th>₹ / task</th></tr></thead>
+<tbody id="rows"><tr><td class="empty" colspan="8">Awaiting first run</td></tr></tbody></table>
+<p class="sub">Results load from <code>results/index.json</code> when it exists. Source: github.com/Shashwat-Kumar/india-ai-index · <a style="color:#8af" href="https://shashwat-kumar.github.io/shashwat-analytics/">shashwat-kumar.github.io/shashwat-analytics</a></p></main>
+<script>fetch('../results/index.json').then(r=>r.ok?r.json():[]).then(d=>{if(!d.length)return;document.getElementById('status').style.display='none';
+const f=x=>x==null?'–':(x*100).toFixed(1);document.getElementById('rows').innerHTML=d.sort((a,b)=>b.overall_score-a.overall_score).map((r,i)=>
+`<tr><td>${i+1}</td><td>${r.provider}</td><td>${r.model}</td><td>${f(r.suites.indic_qa?.score)}</td><td>${f(r.suites.translation?.score)}</td><td>${f(r.suites.doc_extraction?.score)}</td><td><b>${f(r.overall_score)}</b></td><td>${(r.cost_inr_total/r.n_items).toFixed(4)}</td></tr>`).join('')}).catch(()=>{})</script></body></html>

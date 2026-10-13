@@ -1,0 +1,5 @@
+{"id": "tr-001", "suite": "translation", "lang": "hi", "scorer": "chrf", "prompt": "Translate into Hindi. Reply with the translation only.\nPlease send the invoice by Friday.", "reference": "कृपया शुक्रवार तक चालान भेजें।"}
+{"id": "tr-002", "suite": "translation", "lang": "hi", "scorer": "chrf", "prompt": "Translate into Hindi. Reply with the translation only.\nThe bank branch is closed on Sunday.", "reference": "बैंक शाखा रविवार को बंद रहती है।"}
+{"id": "tr-003", "suite": "translation", "lang": "ta", "scorer": "chrf", "prompt": "Translate into Tamil. Reply with the translation only.\nThe train is late by two hours.", "reference": "ரயில் இரண்டு மணி நேரம் தாமதமாக உள்ளது."}
+{"id": "tr-004", "suite": "translation", "lang": "bn", "scorer": "chrf", "prompt": "Translate into Bengali. Reply with the translation only.\nYour loan application has been approved.", "reference": "আপনার ঋণের আবেদন অনুমোদিত হয়েছে।"}
+{"id": "tr-005", "suite": "translation", "lang": "mr", "scorer": "chrf", "prompt": "Translate into Marathi. Reply with the translation only.\nPlease pay the electricity bill today.", "reference": "कृपया आज वीज बिल भरा."}

@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "india-ai-index"
+version = "0.1.0"
+description = "Open benchmark harness for LLMs on India-specific tasks: Indian languages, Indian documents, and cost in INR"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [{name = "Shashwat Kumar"}]
+dependencies = []
+
+[project.optional-dependencies]
+openai = ["openai>=1.0"]
+google = ["google-genai>=0.3"]
+anthropic = ["anthropic>=0.30"]
+hf = ["huggingface_hub>=0.23"]
+dev = ["pytest>=7"]
+
+[project.scripts]
+iai = "india_ai_index.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
