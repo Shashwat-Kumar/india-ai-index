@@ -9,7 +9,7 @@ td.empty{color:#666;text-align:center;font-style:italic}.chips span{display:inli
 <div class="chips"><span>Indic QA (hi, ta, bn, mr)</span><span>Translation (chrF)</span><span>PAN / GST invoice / bank statement extraction (synthetic)</span><span>₹ cost per task</span></div>
 <table><thead><tr><th>#</th><th>Provider</th><th>Model</th><th>Indic QA</th><th>Translation</th><th>Doc extraction</th><th>Overall</th><th>₹ / task</th></tr></thead>
 <tbody id="rows"><tr><td class="empty" colspan="8">Awaiting first run</td></tr></tbody></table>
-<p class="sub">Results load from <code>results/index.json</code> when it exists. Source: github.com/Shashwat-Kumar/india-ai-index · <a style="color:#8af" href="https://shashwat-kumar.github.io/shashwat-analytics/">shashwat-kumar.github.io/shashwat-analytics</a></p></main>
+<p class="sub">Results load from <code>results/index.json</code> when it exists. Source: github.com/Shashwat-Kumar/india-ai-index · <a style="color:#8af" href="https://readsigil.com/">readsigil.com</a></p></main>
 <script>fetch('../results/index.json').then(r=>r.ok?r.json():[]).then(d=>{if(!d.length)return;document.getElementById('status').style.display='none';
 const f=x=>x==null?'–':(x*100).toFixed(1);document.getElementById('rows').innerHTML=d.sort((a,b)=>b.overall_score-a.overall_score).map((r,i)=>
 `<tr><td>${i+1}</td><td>${r.provider}</td><td>${r.model}</td><td>${f(r.suites.indic_qa?.score)}</td><td>${f(r.suites.translation?.score)}</td><td>${f(r.suites.doc_extraction?.score)}</td><td><b>${f(r.overall_score)}</b></td><td>${(r.cost_inr_total/r.n_items).toFixed(4)}</td></tr>`).join('')}).catch(()=>{})</script></body></html>
